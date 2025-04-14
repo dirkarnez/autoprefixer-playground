@@ -8,6 +8,16 @@
     <script type="module">
         import { default as autoprefixer } from "./autoprefixer.10.4.21.esm.min.js";
         import { default as postcss } from "./postcss.8.5.3.esm.min.js";
+        const css = postcss([autoprefixer]).process(`
+.example {
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+}
+`)
+.css;
+        console.log(css);
     </script>
 </body>
 </html>
